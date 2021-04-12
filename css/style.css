@@ -1,0 +1,452 @@
+/*global css*/
+
+*{
+	padding: 0;
+	margin: 0;
+}
+html{
+	scroll-behavior: smooth;
+}
+body{
+	box-sizing: border-box;
+}
+a:hover{
+	text-decoration: none;
+}
+
+/*font family*/
+	/*font-family: 'Playfair Display', serif;
+	font-family: 'Work Sans', sans-serif;*/
+
+/*header section css*/
+
+/*In original site when we header scroll down, logo & menu color change bt i couldn't do that..!?*/ 
+
+header{
+	position: absolute;
+	width: 100%;
+	z-index: 999;
+}
+.navbar{
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+.nav-item{
+	margin: 0px 10px;
+}
+.nav-link{
+	font-family: 'Work Sans', sans-serif;
+	color: #bfbfbf !important;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 500;
+}
+.nav-link:hover{
+	color: white !important;
+}
+
+.sticky{
+	position: fixed;
+	width: 100%;
+	z-index: 9999 !important;
+	background-color: white;
+}
+
+
+/*banner section css*/
+.banner{
+	width: 100%;
+	background-image: url(../img/home.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 100vh;
+	position: relative;
+	padding: 134px 0px;
+	z-index: 1;
+}
+/*for shadow in banner*/
+.opacity{
+	position: absolute;
+	background: rgba(0,0,0,0.57);
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+}
+.banner-text{
+	text-align: center;
+	color: white;
+}
+.banner-text h6{
+	font-family: 'Work Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 3px;
+}
+.banner-text h1{
+	font-family: 'Playfair Display', serif;
+	font-size: 50px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+.banner-text h1 span{
+	font-family: 'Playfair Display', serif;
+	font-style: italic;
+	font-weight: 400;
+}
+.banner-text button{
+	font-family: 'Work Sans', sans-serif;
+	color: white;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 14px;
+	background-color: #252525;
+	border:none;
+	padding: 16px 38px;
+	margin-top: 40px;
+}
+.banner-text button:hover{
+	background-color: #444; 
+	transition: all .5s;
+}
+.banner-icon{
+	text-align: center;
+	margin: 200px 0px;
+}
+.banner-icon a i{
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	line-height: 50px;
+	border: 1px solid rgba(255,255,255,0.65);
+	color: rgba(255,255,255,0.65);
+}
+.banner-icon a i:hover{
+	border: 1px solid rgba(255,255,255,1);
+	color: rgba(255,255,255,1);
+	transition: all .5s ease-in-out;
+}
+
+/*about section css*/
+.about-us{
+	width: 100%;
+	padding: 80px 0px;
+	text-align: center;
+}
+.about-us h1{
+	font-family: 'Playfair Display', serif;
+	font-weight: bold;
+}
+.about-us p{
+	font-family: 'Work Sans', sans-serif;
+	margin: 0px 260px;
+}
+
+/*counter section css*/
+.counter-section{
+	width: 100%;
+	padding: 80px 0px;
+	background-image: url(../img/bg-pattern.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.counter-icon{
+	text-align: right;
+	margin-top: 6px;
+}
+.counter-section i{
+	color: white;
+	font-size: 46px;
+	font-weight: 100;
+}
+.counter-section span,.counter-section p{
+	color: white;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+/*project section css*/
+.project{
+	width: 100%;
+	padding: 80px 0px;
+}
+.project-gallery{
+	text-align: center;
+}
+.project-gallery h1{
+	font-family: 'Playfair Display', serif;
+	font-weight: bold;
+}
+.project-gallery p{
+	font-family: 'Work Sans', sans-serif;
+	margin: 0px 260px;
+	color: #5f5f5f;
+}
+.gallery{
+	margin: 0px 80px;
+}
+.project-1{
+	width: 100%;
+	float: left;
+}
+.project-1 h2{
+	font-family: 'Playfair Display', serif;
+	font-size: 24px;
+	font-weight: bold;
+	color: white;
+}
+.project-1 p{
+	font-family: 'Work Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	margin: 0;
+	padding: 0;
+	color: white;
+}
+.item{
+	width: 33%;
+	float: left;
+	position: relative;
+}
+.item-hover{
+	position: absolute;
+	background-color: rgba(0,0,0,0);
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	transition: all 0.5s ease-in-out;
+	visibility: hidden;
+}
+.item:hover .item-hover{
+	visibility: visible;
+	background-color: rgba(0,0,0,0.85);
+	transition: all 0.4s ease-in-out;
+	cursor: pointer;
+}
+.hover-text{
+	margin: 100px;
+}
+.hover-text h2{
+	transform: translateY(10px);
+	opacity: 0;
+	transition: transform .4s .2s, opacity .4s .2s;
+}
+.hover-text p{
+	transform: translateY(10px);
+	opacity: 0;
+	transition: transform .4s .3s, opacity .4s .3s;
+}
+.item:hover .hover-text h2, .item:hover .hover-text p{
+	transform: translateY(4px);
+	opacity: 1;
+}
+
+/*review section css*/
+/*problems:
+1) couldn't make it in center..!?
+2) 'owl-dots' without select couldn't make it small size..!?*/
+
+.review{
+	width: 100%;
+	padding: 80px 0px;
+	margin-top: 700px;
+	background-image: url(../img/bg-pattern.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	/*height: 60vh;*/
+}
+.review-text{
+	text-align: center;
+	/*padding: 140px 300px; */
+}
+.review-text h4{
+	font-family: 'Playfair Display', serif;
+	font-style: italic;
+	color: white;
+	line-height: 1.5;
+}
+.review-text p{
+	font-family: 'Work Sans', sans-serif;
+	color: white;
+	text-transform: uppercase;
+}
+.review .owl-theme .owl-dots{
+	display: block;
+}
+
+/*partners logo css*/
+.partners-logo{
+	width: 100%;
+	padding: 50px 150px;
+	text-align: center;
+	background-color: #fff!important;
+	/*border-bottom: 0.05px inset;*/
+}
+
+.partners-logo .owl-carousel .owl-item img{
+	width: 180px;
+}
+.owl-theme .owl-dots, .owl-theme .owl-nav{
+	display: none;
+}
+
+/*blog section css*/
+/*problems:
+1) In img effect cursor in ok but cursor out effect nt working..!?
+2) In original site 'owl-dots' showing 5 bt in my project showing 3 dots n also non-select dots not showing small size..!? */
+.blog{
+	width: 100%;
+	padding: 60px 150px;
+	background-color: #fafafa;
+}
+.blog-test{
+	text-align: center;
+}
+.blog-test h1{
+	font-family: 'Playfair Display', serif;
+	font-weight: bold;
+}
+.blog-test p{
+	font-family: 'Work Sans', sans-serif;
+	margin: 0px 150px;
+	color: #5f5f5f;
+}
+.img-category h6{
+	display: inline-block;
+	padding: 8px 22px;
+	background-color: #252525;
+	color: white;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	position: absolute;
+	bottom: 2px;
+	left: 10px;
+}
+.custom-card-img{
+	position: relative;
+}
+.custom-card-img img:hover{
+	cursor: pointer;
+	filter: opacity(60%);
+	transition: all .3s ease-in-out;
+}
+.card{
+	background-color: #fff !important;
+	border: none;
+}
+.card-body h4{
+	font-family: 'Playfair Display', serif;
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: 10px;
+}
+.card-body span{
+	font-family: 'Work Sans', sans-serif;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 500;
+	margin-top: 12px;
+	margin-left: 10px;
+}
+.card-body p{
+	font-family: 'Work Sans', sans-serif;
+	color: #5f5f5f;
+	margin-top: 16px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.blog .owl-theme .owl-dots{
+	display: block;
+}
+
+/*contact section css*/
+.contact{
+	width: 100%;
+	padding: 100px 150px;
+	background-color: #f6f6f6;
+}
+.contact h1{
+	font-family: 'Playfair Display', serif;
+	font-weight: bold;
+}
+.contact p{
+	font-family: 'Work Sans', sans-serif;
+	color: #5f5f5f;
+}
+.contact ul{
+	padding: 0;
+	margin: 0;
+}
+.contact ul li{
+	list-style: none;
+	line-height: 34px;
+}
+.form-control{
+	padding: 16px 22px;
+	margin-bottom: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #fff;
+    border: none;
+    border-radius: 0;
+}
+.form-control:focus{
+	outline: none;
+}
+.form-btn{
+	background-color: #252525;
+	font-family: 'Work Sans', sans-serif;
+	padding: 16px 26px;
+	color: #ffffff;
+	font-size: 14px;
+	border: none;
+	text-transform: uppercase;
+}
+.form-btn:hover{
+	background-color: #444444;
+	transition: all .3s ease-in-out;
+}
+
+/*footer section*/
+.footer{
+	width: 100%;
+	padding: 40px 0px;
+	background-color: #ebebeb;
+}
+.footer-icon ul{
+	text-align: center;
+	font-size: 17px;
+	
+}
+.footer-icon ul li{
+	list-style: none;
+	display: inline-block;
+
+}
+.footer-icon ul li a i{
+	letter-spacing: 12px;
+	color: #5f5f5f;
+	opacity: .5;
+    
+}
+.footer-icon ul li a i:hover{
+	color: #171717;
+	opacity: .9;
+	transition: opacity .5s;
+}
+.footer-text{
+	text-align: center;
+}
+.footer-text p{
+	font-family: 'Work Sans', sans-serif;
+	color: #5f5f5f;
+	font-size: 14px;
+}
+
